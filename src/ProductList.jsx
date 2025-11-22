@@ -269,6 +269,9 @@ function ProductList({ onHomeClick }) {
     const calculateTotalQuantity = () => {
         return cartItems ? cartItems.reduce((total, item) => total + item.quantity, 0) : 0;
          };
+    const between = (x, min, max) => {
+        return x >= min && x <= max;
+    };
 
     return (
         <div>
@@ -297,7 +300,9 @@ function ProductList({ onHomeClick }) {
                                 fill="none" stroke="#faf9f9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" id="mainIconPathAttribute">
                                     </path>                                    
                             </svg>
-                            <text class="cart_quantity_count" id="cart-count" text-anchor="middle">{calculateTotalQuantity()}</text>                            
+                            <text className={between(calculateTotalQuantity(), 0, 9) ? "cart_quantity_count" : "cart_quantity_count_big"} >                              
+                                {calculateTotalQuantity()}
+                            </text>                            
                         </h1></a>                        
                     </div>
                 </div>

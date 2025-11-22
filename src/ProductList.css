@@ -169,13 +169,16 @@ body {
     display: flex;
 }
 .cart_quantity_count{
-    margin-top: 16px;
-    /* background-color: red; */
-    margin-left: 25px;
+    margin-top: 19px;
+    margin-left: 27px;
     position: absolute;
     font-size: 26px;
-    color: red;
-
+}
+.cart_quantity_count_big{
+    margin-top: 19px;
+    margin-left: 21px;
+    position: absolute;
+    font-size: 26px;
 }
 .plantname_heading{
    display: flex;
